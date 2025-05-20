@@ -1,151 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
 
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SIT725 Task3.2P</title>
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- For icons -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SIT725 Task 4.2P</title>
+
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Custom Style Sheet-->
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
-
     <nav>
-        <div class="nav-wrapper black">
-            <a href="#" class="brand-logo left">
-                <img src="public/images/f1-logo.png" alt="Logo" style="height: 65px;">
-            </a>
+        <div class="nav-wrapper navbar-size black">
+          <a href="#" class="brand-logo"><img class="user-image-size" src="public/images/f1-logo.png" style="height: 65px" /></a>
         </div>
     </nav>
-
-    <div class="container">
+    <main class="main-body">
+      <div class="container">
         <div class="row">
-            <div class="col s12">
-                <h1 class="center-align">Welcome to SIT 725 Task3.2P</h1>
-                <br />
-                <p>This is a demo application to show the Functions and alerts in it.</p>
-                <br><br>
-
-
-                <div class="image-container center-align">
-                    <img src="public/images/race.jpg"  alt="live demo">
-                </div>
-
-
-                <div class="center-align">
-                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Click Me</a>
-                </div>
+          <div class="col s12 center-align">
+            <h1 id="heading">Welcome to SIT725 Week 4</h1>
+            <p class="flow-text">This is a demo application that Uses rest API to send card data and also connects with Mongo db </p>
+          </div>
+          <div class="col s12 center-align">
+            <img class="materialboxed materialboxed-image" src="public/images/race.jpg">
+          </div>
+          <div class="col s12 center-align">
+            <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i class="material-icons left">auto_fix_high</i>Click Me</a>
+          </div>
+        </div>
+        <div class="row" id="card-section">
+         
+        </div>
+      </div>
+        <!-- Modal Structure -->
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="row modal-content">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Placeholder" id="title" type="text" class="validate">
+                <label for="title">Title</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="image" type="text" class="validate">
+                <label for="image">Image</label>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <h4>Please fill in the details:</h4>
-            <form id="user-form">
-                <div class="input-field">
-                    <input type="text" id="first-name" name="first-name" required>
-                    <label for="first-name">First Name</label>
-                </div>
-                <div class="input-field">
-                    <input type="text" id="last-name" name="last-name" required>
-                    <label for="last-name">Last Name</label>
-                </div>
-                <div class="input-field">
-                    <input type="password" id="password" name="password" required>
-                    <label for="password">Password</label>
-                </div>
-                <div class="input-field">
-                    <input type="email" id="email" name="email" required>
-                    <label for="email">Email</label>
-                </div>
-                <button type="submit" class="waves-effect waves-light btn">Submit</button>
-            </form>
-        </div>
-    </div>
-
-
-    
-
-    <!-- Cards Row -->
-    <div class="row center-align">
-        <!-- Card 1 -->
-        <div class="col s12 m4">
-            <div class="card">
-                <div class="card-image">
-                    <img src="public/images/ferrari-f1.jpeg" alt="Image 1">
-                    <span class="card-title">Ferrari F1 Car</span>
-
-                    <a class="btn-floating halfway-fab waves-effect waves-light grey darken-1 dropdown-trigger" href="#"
-                        data-target="dropdown1">
-                        <i class="material-icons">more_vert</i>
-                    </a>
-
-                </div>
-                <div class="card-content">
-                    <p>Ferrari doesn’t compete directly in F2 but supports Prema Racing, known for strong performances
-                        and developing future F1 talent.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">About ferrari</a>
-                </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="link" type="text" class="validate">
+                <label for="link">Link</label>
+              </div>
             </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col s12 m4">
-            <div class="card">
-                <div class="card-image">
-                    <img src="public/images/Mclaren-f1.jpeg" alt="Image 2">
-                    <span class="card-title">Mclaren F1 Car </span>
-
-                    <a class="btn-floating halfway-fab waves-effect waves-light grey darken-1 dropdown-trigger" href="#"
-                        data-target="dropdown2">
-                        <i class="material-icons">more_vert</i>
-                    </a>
-
-                </div>
-                <div class="card-content">
-                    <p>McLaren does not have a direct F2 team, focusing instead on F1 and IndyCar, with driver
-                        development handled through partnerships.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">About ferrari</a>
-                </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="description" type="text" class="validate">
+                <label for="description">Description</label>
+              </div>
             </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col s12 m4">
-            <div class="card">
-                <div class="card-image">
-                    <img src="public/images/redbul-f1.jpeg" alt="Image 3">
-                    <span class="card-title">RedBull F1 Car</span>
-
-                    <a class="btn-floating halfway-fab waves-effect waves-light grey darken-1 dropdown-trigger" href="#"
-                        data-target="dropdown3">
-                        <i class="material-icons">more_vert</i>
-                    </a>
-
-                </div>
-                <div class="card-content">
-                    <p> Red Bull backs teams like Hitech and MP Motorsport, using F2 as a feeder series for its F1
-                        junior program.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">About ferrari</a>
-                </div>
+            <div class="row">
+              <div class="input-field col s12 center-align">
+                <a class="waves-effect waves-light btn" id="formSubmit">submit</a>
+              </div>
             </div>
+          </form>
         </div>
-    </div>
- 
- <script type="text/javascript"  src="public/js/script.js"></script>
-
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+      </div>
+    </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="public/js/script.js"></script>
 </body>
-
 </html>
