@@ -2,28 +2,28 @@ const clickMe = () => {
     alert("Thanks for clicking me. Hope you have a nice day!")
 }
 
-// const addProjectToApp = (project) => {
-//     $.ajax({
-//         url: '/api/projects',
-//         data: project,
-//         type: 'POST',
-//         success: (result) => {
-//             alert(result.message);
-//             location.reload();
-//         }
-//     })
-// }
+const addProjectToApp = (project) => {
+    $.ajax({
+        url: '/api/projects',
+        data: project,
+        type: 'POST',
+        success: (result) => {
+            alert(result.message);
+            location.reload();
+        }
+    })
+}
 
-// const submitForm = () => {
-//     let formData = {};
-//     formData.title = $('#title').val();
-//     formData.image = $('#image').val();
-//     formData.link = $('#link').val();
-//     formData.description = $('#description').val();
+const submitForm = () => {
+    let formData = {};
+    formData.title = $('#title').val();
+    formData.image = "public/images/ferrari-f1.jpeg";
+    formData.link = $('#link').val();
+    formData.description = $('#description').val();
 
-//     console.log("Form Data Submitted: ", formData);
-//     addProjectToApp(formData);
-// }
+    console.log("Form Data Submitted: ", formData);
+    addProjectToApp(formData);
+}
 
 const getProjects = () => {
     $.get('/api/projects', (response) => {
