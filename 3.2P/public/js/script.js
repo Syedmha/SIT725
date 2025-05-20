@@ -4,9 +4,9 @@ function showForm() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.modal');
+    M.Modal.init(elems);
+
     var dropdowns = document.querySelectorAll('.dropdown-trigger');
-    M.Dropdown.init(dropdowns, {
-        constrainWidth: false, 
-        coverTrigger: false    
-    });
+    M.Dropdown.init(dropdowns, { constrainWidth: false });
 });
