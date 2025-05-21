@@ -1,0 +1,19 @@
+{
+  "name": "f1-car-info-app",
+  "version": "1.0.0",
+  "description": "Upload and display user input using MVC",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mongoose": "^8.15.0",
+    "multer": "^2.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
